@@ -8,35 +8,71 @@ This project demonstrates how to build an interactive sales analytics dashboard 
 
 Target audience: data analysts, business users, and developers who want a starting template for sales reporting and visualization in Power BI.
 
-## Power BI Desktop file (PBIX)
+## Files included
 
-- File: [Power BI Advanced.pbix](./Power%20BI%20Advanced.pbix)
-- Size: 328,678 bytes (included in repository)
+- `Power BI Advanced.pbix` — Power BI Desktop report file containing the interactive dashboard (path: `Power BI Advanced.pbix`).
+- `FactSales.csv` — transactional sales data used as the fact table (path: `FactSales.csv`).
+- `DimCustomers.csv` — customer dimension (path: `DimCustomers.csv`).
+- `DimProducts.csv` — product dimension (path: `DimProducts.csv`).
+- `DimRegions.csv` — region dimension (path: `DimRegions.csv`).
+- `DimSalesReps.csv` — sales representative dimension (path: `DimSalesReps.csv`).
+- `README.md` — this file with usage instructions and documentation.
 
-Description
+(If you add other files later, list them here with a short description.)
 
-This PBIX file contains the interactive Sales Advanced dashboard built with Power BI Desktop. It uses the CSV datasets included in this repository as its data source. The report provides interactive visualizations for sales metrics and supports filtering, drill-downs, and cross-highlighting.
+## Key insights and visuals
 
-Datasets included in this repository (used by the PBIX file)
+The report is designed to surface common sales and business insights. Example insights you can explore in the dashboard:
 
-- `FactSales.csv` — transactional sales data
-- `DimCustomers.csv` — customer dimension
-- `DimProducts.csv` — product dimension
-- `DimRegions.csv` — region dimension
-- `DimSalesReps.csv` — sales representative dimension
+- Total sales, orders, and average order value (KPI cards).
+- Sales trend over time (daily/monthly/quarterly) and seasonality patterns.
+- Top-performing products and product categories by revenue and quantity sold.
+- Regional sales performance and geographic distribution of revenue.
+- Customer segmentation by revenue and order frequency (top customers vs long-tail).
+- Sales representative performance and leaderboard.
+- Product or region drill-through pages that show transaction-level details.
+- Filters and slicers for time period, product category, region, and sales rep to answer ad-hoc questions.
 
-How to open and explore
+These visuals help stakeholders quickly identify growth opportunities, underperforming areas, and high-value customers.
+
+## Steps to open, explore, and refresh the report
 
 1. Download the `Power BI Advanced.pbix` file from this repository.
-2. Open it using Power BI Desktop (download latest stable release from Microsoft if you don't have it).
-3. If the report cannot find the CSV files, point the PBIX file to the CSV files in this repository (File -> Options and settings -> Data source settings -> Change Source) or copy the CSV files locally and update the file paths.
-4. Refresh the report (Home -> Refresh) to load the latest data from the CSV files.
+2. Install Power BI Desktop (get the latest stable version from Microsoft if you don't already have it).
+3. Open `Power BI Advanced.pbix` in Power BI Desktop.
+4. If visuals show errors because the PBIX cannot find the CSV files, update the data source:
+   - Go to File -> Options and settings -> Data source settings -> Change Source.
+   - Point the file paths to the local copies of the CSV files or set the folder path where the CSV files reside.
+   - Alternatively, copy the CSV files into the same relative location the PBIX expects.
+5. Refresh the dataset (Home -> Refresh) so Power BI re-reads the CSV files and loads the latest data.
+6. Interact with the report:
+   - Use slicers to filter by date range, region, product, or sales rep.
+   - Click visuals to cross-filter and drill down/up where supported.
+   - Use drill-through pages for transaction-level analysis.
+7. Exporting and sharing:
+   - Export a report page as PDF (File -> Export -> PDF) or export data from a visual (right-click a visual -> Export data).
+   - If you have Power BI Service, publish the PBIX to your workspace to share dashboards and set up scheduled refreshes (requires data to be accessible from the service or via a gateway).
 
-Notes for contributors
+Tips
 
-- If you update the PBIX file, please include the updated .pbix in the repository and note in the commit message which pages or visuals were changed.
-- To change or extend the dataset, modify the CSV files or reconnect the PBIX to an external data source and include instructions in the README describing the new connection details.
+- If the report hangs during refresh, try disabling unnecessary visuals or increasing Power BI's memory by running fewer other applications.
+- Use parameters for file paths when you want contributors to point the PBIX to local files without editing queries.
+- To publish to Power BI Service and schedule refreshes, place the CSV files in a cloud storage (OneDrive/SharePoint) or configure an on-premises gateway.
 
-License
+## How the data model is structured
+
+The PBIX uses a star schema:
+
+- Fact table: `FactSales` (transactions, measures like Sales Amount, Quantity, Cost)
+- Dimension tables: `DimProducts`, `DimCustomers`, `DimRegions`, `DimSalesReps`
+
+Relationships are one-to-many from each dimension table to the fact table on their respective keys.
+
+## Contributions
+
+- If you update the PBIX, please include the updated `.pbix` file and describe the changes in the commit message (e.g., "Updated Product detail page, added YOY measure").
+- For changes to the dataset, update the CSV files and include a note describing the data source and any transformation logic used.
+
+## License
 
 See the repository root for license information (if provided).
