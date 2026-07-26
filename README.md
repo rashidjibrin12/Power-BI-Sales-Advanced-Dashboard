@@ -2,6 +2,12 @@
 
 This repository contains a Power BI report and the dataset files used to build the Sales Advanced dashboard.
 
+## About this project
+
+This project demonstrates how to build an interactive sales analytics dashboard using Power BI Desktop. It includes an example sales dataset and a pre-built PBIX report that showcases common business intelligence features such as KPI cards, trend charts, geographic maps, drill-throughs, slicers, and cross-highlighting. The data model follows a simple star schema (one fact table with several dimension tables) so it's easy to explore, extend, and adapt to real-world datasets.
+
+Target audience: data analysts, business users, and developers who want a starting template for sales reporting and visualization in Power BI.
+
 ## Power BI Desktop file (PBIX)
 
 - File: [Power BI Advanced.pbix](./Power%20BI%20Advanced.pbix)
