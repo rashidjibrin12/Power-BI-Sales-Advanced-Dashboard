@@ -1,8 +1,8 @@
-# Power BI Sales Advanced Dashboard
+# Power BI Executive Dashboard
 
 This project is a sales dashboard built in Power BI using a realistic B2B industrial sales dataset. It combines transaction-level sales data with product, customer, region, and sales rep information to give a clearer picture of performance across revenue, profit, targets, and discounts.
 
-The goal was to build something that feels close to how a real sales team would look at business performance—tracking what is selling, where it is selling, who is driving the results, and where the biggest opportunities are.
+The goal was to build something that feels close to how a real sales team would look at business performance-tracking what is selling, where it is selling, who is driving the results, and where the biggest opportunities are.
 
 The dashboard helps answer practical questions like:
 - Which products and categories are generating the most revenue and profit?
@@ -14,11 +14,11 @@ The dashboard helps answer practical questions like:
 The data model follows a star schema, with a central fact table at the center of the analysis and supporting dimension tables providing context around each transaction.
 
 ## Data Sources
-- FactSales.csv — Transactional sales data including order date, ship date, product, customer, region, sales rep, quantity, unit price, discount, revenue, profit, target, and forecast
-- DimProducts.csv — Product details, including category and subcategory
-- DimCustomers.csv — Customer profiles and B2B segment classification
-- DimRegions.csv — Geographic and country mapping for sales territories
-- DimSalesReps.csv — Sales rep assignments by territory
+- FactSales.csv: Transactional sales data including order date, ship date, product, customer, region, sales rep, quantity, unit price, discount, revenue, profit, target, and forecast
+- DimProducts.csv: Product details, including category and subcategory
+- DimCustomers.csv: Customer profiles and B2B segment classification
+- DimRegions.csv: Geographic and country mapping for sales territories
+- DimSalesReps.csv: Sales rep assignments by territory
 
 ## What the data tells us
 A few patterns stand out from the dataset:
