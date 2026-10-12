@@ -14,11 +14,11 @@ The dashboard helps answer practical questions like:
 The data model follows a star schema, with a central fact table at the center of the analysis and supporting dimension tables providing context around each transaction.
 
 ## Data Sources
-- FactSales.csv — transactional sales data including order date, ship date, product, customer, region, sales rep, quantity, unit price, discount, revenue, profit, target, and forecast
-- DimProducts.csv — product details, including category and subcategory
-- DimCustomers.csv — customer profiles and B2B segment classification
-- DimRegions.csv — geographic and country mapping for sales territories
-- DimSalesReps.csv — sales rep assignments by territory
+- FactSales.csv — Transactional sales data including order date, ship date, product, customer, region, sales rep, quantity, unit price, discount, revenue, profit, target, and forecast
+- DimProducts.csv — Product details, including category and subcategory
+- DimCustomers.csv — Customer profiles and B2B segment classification
+- DimRegions.csv — Geographic and country mapping for sales territories
+- DimSalesReps.csv — Sales rep assignments by territory
 
 ## What the data tells us
 A few patterns stand out from the dataset:
