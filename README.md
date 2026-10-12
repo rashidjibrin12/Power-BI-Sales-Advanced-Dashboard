@@ -55,7 +55,5 @@ The dashboard is structured to reveal several important business insights:
 - The dataset supports both operational reporting and strategic analysis, making it suitable for business review and weekly sales tracking.
 
 ## Final Summary
-This Power BI dashboard is a strong example of a modern sales analytics project that combines data preparation, modeling, KPI analysis, and executive reporting. It shows how raw sales records can be transformed into a clear and interactive decision-support tool for business leaders.
-
 By combining product, customer, region, and sales representative views, the project demonstrates practical business intelligence capabilities that are highly relevant for data analytics, sales operations, and performance reporting roles.
 
