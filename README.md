@@ -1,4 +1,4 @@
-# Power BI Sales Advanced Dashboard
+# Power BI Executive Dashboard
 
 ## Project Overview
 This project is a sales performance dashboard built in Power BI to analyze transactional sales data across products, customers, regions, and sales representatives. The dashboard is designed to help stakeholders quickly understand business performance, compare actual results to targets and forecasts, and identify growth opportunities or decline areas.
