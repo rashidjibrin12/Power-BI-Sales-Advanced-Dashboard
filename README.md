@@ -54,6 +54,9 @@ The dashboard is structured to reveal several important business insights:
 - Discounting, product mix, and territory concentration are likely key drivers of margin and profitability.
 - The dataset supports both operational reporting and strategic analysis, making it suitable for business review and weekly sales tracking.
 
+<img width="1696" height="951" alt="{BE227752-3EBB-439C-B9A2-9557DDB244ED}" src="https://github.com/user-attachments/assets/7b7e57b5-228c-4b51-a19c-9053ea156273" />
+
+
 ## Final Summary
 By combining product, customer, region, and sales representative views, the project demonstrates practical business intelligence capabilities that are highly relevant for data analytics, sales operations, and performance reporting roles.
 
