@@ -10,23 +10,23 @@ The dashboard is designed to answer practical business questions such as:
 - How do discounts, order size, and product mix affect margin?
 - Where are the biggest opportunities for growth, margin improvement, or sales coverage?
 
-The data model follows a star schema with a central fact table (`FactSales.csv`) and supporting dimensions (`DimProducts.csv`, `DimCustomers.csv`, `DimRegions.csv`, and `DimSalesReps.csv`). This structure is consistent with typical business intelligence reporting used in manufacturing, industrial distribution, and sales operations.
+The data model follows a star schema with a central fact table (FactSales.csv) and supporting dimensions (DimProducts.csv, DimCustomers.csv, DimRegions.csv, and DimSalesReps.csv). This structure is consistent with typical business intelligence reporting used in manufacturing, industrial distribution, and sales operations.
 
 ## Data Sources
-- `FactSales.csv` — transactional sales records including order date, ship date, product, customer, region, sales rep, quantity, unit price, discount, revenue, profit, target, and forecast
-- `DimProducts.csv` — product master data with category and subcategory
-- `DimCustomers.csv` — customer master data and B2B segment classification
-- `DimRegions.csv` — geographic and country mapping for sales territories
-- `DimSalesReps.csv` — sales rep assignments by territory
+- FactSales.csv — Transactional sales records including order date, ship date, product, customer, region, sales rep, quantity, unit price, discount, revenue, profit, target, and forecast
+- DimProducts.csv — Product data with category and subcategory
+- DimCustomers.csv — Customer data and B2B segment classification
+- DimRegions.csv — Geographic and country mapping for sales territories
+- DimSalesReps.csv — Sales rep assignments by territory
 
-## Actual Observations from the PBIX
-The dashboard is not a generic demo; it reflects a very specific industrial sales pattern.
+## Key Findings
+The dashboard highlights several practical business insights:
 
 ### 1) The business is B2B and project-driven rather than retail
 The sales data is built around a limited number of business accounts, territories, and representatives, with each order tied to products, customers, and geography. The presence of sales reps, region mapping, and industrial product categories suggests a manufacturing or distribution context rather than consumer retail.
 
 ### 2) Revenue is driven by a small number of high-value products
-The most meaningful revenue spikes come from premium industrial items with high unit prices and larger order quantities. Products in the higher-value segment—especially pumps, motors, safety equipment, and other capital-intensive inventory—generate the largest order values. These products are the main contributors to overall revenue, even though they may not be the highest-volume items.
+The most meaningful revenue spikes come from premium industrial items with high unit prices and larger order quantities. Products in the higher-value segment generate the largest order values. These products are the main contributors to overall revenue, even though they may not be the highest-volume items.
 
 ### 3) Profitability is strongest where pricing and order mix are favorable
 The data shows a clear relationship between order size, price point, and margin performance. Larger orders in premium categories often produce the strongest absolute profit, while lower-priced products can still generate volume but contribute less to total profit. This makes the dashboard useful for evaluating not just revenue growth, but margin quality.
@@ -38,23 +38,10 @@ Discounts appear in the dataset as an operational lever, and they can materially
 The data includes multiple countries and territories, and performance is not evenly distributed. Some territories show stronger revenue concentration due to larger order values or more repeated high-transaction activity, while others are more moderate. This supports the idea that the dashboard is useful for territory-level sales planning and resourcing decisions.
 
 ### 6) Target and forecast track sales activity, but large orders create spikes
-The presence of `Target` and `Forecast` columns is important: the dashboard is designed to compare actual performance against expected performance. The dataset shows that actual sales often align well with expectations, but notable deviations occur when large, high-priority orders arrive. These deviations make it valuable to monitor both trend and exception performance, not just the average.
+The presence of Target and Forecast columns is important: the dashboard is designed to compare actual performance against expected performance. The dataset shows that actual sales often align well with expectations, but notable deviations occur when large, high-priority orders arrive. These deviations make it valuable to monitor both trend and exception performance, not just the average.
 
 ### 7) The sales pattern is operationally realistic
 The data includes a broad range of order values—from smaller orders to large multi-thousand-dollar transactions—with a realistic mix of low-value and premium-value orders. This is a strong sign that the dataset was designed to mimic real B2B sales behavior rather than a simplified or artificially flat scenario.
-
-## Key Findings
-The dashboard highlights several practical business insights:
-
-- Revenue concentration is driven by high-value industrial products rather than broad-based low-price transactions.
-- Profitability is influenced by product mix, discounting, and order scale, not just total sales volume.
-- A few regions and sales reps appear to be carrying more of the revenue weight, creating natural opportunities for coaching, territory balancing, and sales focus.
-- Forecasting is useful for planning, but the strongest commercial outcomes are still driven by strategic account activity and large-value orders.
-- The data supports both operational monitoring and executive decision-making, especially for product, territory, and rep performance management.
-- The dashboard is best interpreted as a sales-control and performance-monitoring tool, not just a visualization exercise.
-
-## Executive Summary
-This project demonstrates a realistic and analytically useful Power BI implementation for industrial sales performance management. The dataset shows a sales environment where revenue generation is concentrated in a handful of premium products and territories, while profitability depends on pricing discipline, order size, and discount management. The dashboard is well suited for answering enterprise questions around performance trends, sales rep effectiveness, regional contribution, and target-versus-actual sales outcomes.
 
 ## Tools Used
 - Microsoft Power BI Desktop
@@ -66,8 +53,8 @@ This project demonstrates a realistic and analytically useful Power BI implement
 ## Screenshot
 <img width="1696" height="951" alt="Power BI executive sales dashboard screenshot" src="https://github.com/user-attachments/assets/7b7e57b5-228c-4b51-a19c-9053ea156273" />
 
-## Final Note
-This repository is useful as both a data model example and a practical business intelligence case study. It reflects a realistic interpretation of industrial sales analytics, with metrics grounded in a coherent product, customer, region, and performance structure rather than generic sample content.
+## Executive Summary
+This project demonstrates a realistic and analytically useful Power BI implementation for industrial sales performance management. The dataset shows a sales environment where revenue generation is concentrated in a handful of premium products and territories, while profitability depends on pricing discipline, order size, and discount management. The dashboard is well suited for answering enterprise questions around performance trends, sales rep effectiveness, regional contribution, and target-versus-actual sales outcomes.
 
 
 
